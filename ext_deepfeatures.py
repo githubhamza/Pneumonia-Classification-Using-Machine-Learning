@@ -16,13 +16,13 @@ def img_resizer(img, target_shape):
 
 
 train_path = (
-    '/content/sample_data/dataset/train/PNEUMONIA',
-    '/content/sample_data/dataset/train/NORMAL'
+    '/dataset/train/PNEUMONIA',
+    '/dataset/train/NORMAL'
 )
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-model = torch.load('/content/drive/MyDrive/ML_Project/weights/cnn.pth').feature_extractor.to(device) #enter path for saved weights from train_cnn
+model = torch.load('/weights/cnn.pth').feature_extractor.to(device) #enter path for saved weights from train_cnn
 
 with torch.no_grad():
     model.eval()
@@ -52,4 +52,4 @@ with torch.no_grad():
 dataset = np.asarray(dataset)
 np.random.shuffle(dataset)
 
-np.save('/content/drive/MyDrive/ML_Project/dataset/deep_f_train.npy', dataset) #enter path for saving features from ext_deepfeatures
+np.save(/dataset/deep_f_train.npy', dataset) #enter path for saving features from ext_deepfeatures
