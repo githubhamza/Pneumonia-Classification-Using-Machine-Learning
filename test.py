@@ -60,10 +60,10 @@ dataset = np.asarray(dataset)
 np.random.shuffle(dataset)
 
 # enter path for saving features from test.py
-np.save('dataset/deep_f_test2.npy', dataset)
+np.save('dataset/deep_f_test.npy', dataset)
 
 # enter path for loading features from ext_deepfeatures
-dataset_path = 'dataset/deep_f_test2.npy'
+dataset_path = 'dataset/deep_f_test.npy'
 model_path = 'weights/svc.sav'  # enter path for loading weights from training_svm
 
 dataset = np.load(dataset_path)
