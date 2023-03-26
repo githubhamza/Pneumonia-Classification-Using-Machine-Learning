@@ -2,8 +2,8 @@ from sklearn.svm import LinearSVC
 import numpy as np
 import joblib
 
-dataset_path = '/content/drive/MyDrive/ML_Project/dataset/deep_f_train.npy' #enter path for extracted features from ext_deepfeatures
-model_path = '/content/drive/MyDrive/ML_Project/weights/svc.sav' #enter path for saving weights of training_svm
+dataset_path = '/dataset/deep_f_train.npy' #enter path for extracted features from ext_deepfeatures
+model_path = '/weights/svc.sav' #enter path for saving weights of training_svm
 
 dataset = np.load(dataset_path)
 
