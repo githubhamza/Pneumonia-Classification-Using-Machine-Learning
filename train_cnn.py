@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-train_root = '/content/sample_data/dataset/train' #Enter training set path here
-val_root = '/content/sample_data/dataset/val' #Enter Validation set path here
+train_root = '/dataset/train' #Enter training set path here
+val_root = '/dataset/val' #Enter Validation set path here
 img_channels = 3
 
 image_transforms = {
@@ -91,7 +91,7 @@ for e in range(1, 21):
             val_loss = criterion(y_val_pred, y_val_batch)
             val_epoch_loss += val_loss.item()
 
-    torch.save(model, '/content/drive/MyDrive/ML_Project/weights/cnn.pth') #Enter path and filename for saving weights of train_cnn
+    torch.save(model, '/weights/cnn.pth') #Enter path and filename for saving weights of train_cnn
     loss_stats['train'].append(train_epoch_loss/len(train_loader))
     loss_stats['val'].append(val_epoch_loss/len(val_loader))
     
